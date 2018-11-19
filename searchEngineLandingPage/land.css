@@ -1,0 +1,130 @@
+body {
+	color: white;
+	font-family: 'Allerta Stencil', sans-serif;
+}
+h1 {
+	background-color: black;
+	color: white;
+	z-index: 2;
+	position: absolute;
+	margin-bottom: 100px;
+	text-align: center;
+	width: 98%;
+	opacity: 0.8;
+}
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+}
+		.meow {
+			width: 50px;
+			border-radius: 50%;
+			text-align: right;
+			z-index: 4;
+			float: left;
+			position: relative;
+			
+		}
+		#tumi {
+			text-align: right;
+		}
+		#lwazi {
+			padding: 10px;
+			border-radius: 20px;
+		}
+		input {
+			opacity: 0.5;
+			padding-left: 200px;
+			width: 40%;
+			height: 20px;
+			background-color: black;
+			color: white;
+		}
+
+.hed {
+	width: 100%;
+
+	margin-left: 30px;
+	height: 350px;
+
+}
+.ser {
+	text-align: center;
+}
+.thu {
+	opacity: 0.5;
+	border-radius: 50px;
+}
+.afri, .afri1, .afri2, .afri3 {
+	float: left;
+	width: 24%;
+	opacity: 0.8;
+	overflow: auto;
+	text-align: center;
+	background-color: black;
+}
+
+
+.afri img, .afri1 img, .afri2 img, .afri3 img{
+	width: 80%;
+	height: auto;
+	display: block;
+	text-align: center;
+	margin-left: 40px;
+} 
+ 
+.afri, .afri1, .afri2, .afri3 {
+	border-left: 3px solid #EE7752;
+	height: 400px;
+	overflow: auto;
+}
+
+.afri {
+	border-left: none;
+}
+
+::-webkit-scrollbar {
+	opacity: 0.5;
+}
+ @media (max-width:720px) {
+	.afri, .afri1, .afri2, .afri3 {
+		float: none;
+		width: 100%;
+		border: none;
+		border-top: 5px solid white;
+	}
+	#lwazi  {
+		position: relative;
+		bottom: 500px;
+		height: 10px;
+		width: 70%;		
+	} 
+	.hed {
+		width: 100%;
+		right: 50px;
+		/*display: block;*/
+		
+	}
+	.ser {
+		margin-bottom: 20px;
+		position: relative;
+	}
+	h1 {
+		margin-bottom: 20px;
+		position: relative;
+	}
+	.thu {
+		bottom: 500px;
+		position: relative;
+	}
+	 #tumi img{
+	margin-bottom: 1165px;
+	width: 5%;
+	position: absolute;
+	z-index: 3;
+ }
+ 
+ }
