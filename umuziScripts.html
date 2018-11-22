@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>My Scripts</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="https://fonts.googleapis.com/css?family=Acme|Pacifico|Shadows+Into+Light" rel="stylesheet">
+		</head>
+	<style>
+		body {
+			font-family: 'Acme', sans-serif;
+		}
+	
+		h1 {
+			text-align: center;
+			width: 100%;
+			background-color: #c6c9ce; 
+		}
+		
+		#f1, #f2, #f3, #f4, #f5 {
+			background-color: #898d93;
+			float: left;
+			width: 20%;
+			height: 300px;
+		}		
+		#pontxho {
+			width: 100%;
+			background-color: #3e4b60;
+			height: 500px;
+			font-size: 89px;
+			text-align: center;
+			top: 200px;
+		}
+	</style>
+	<body>
+	<h1>Hello and welcome to the numbers game</h1>
+	<div id="f1">
+	<p>65 the Bully</p>
+		<form id="nomoro">
+			First Number: 	<br><input type="number" name="num1">
+			<br>
+			Second Nuumber: <br><input type="number" name="num2">
+			
+		</form> <br>
+		<button onclick="funky()">Subs</button>
+	</div>
+	<div id="f2">
+	<p>Issa game of Lengthy sides</p>
+		<form id="bogolo" >
+			Lenght1:	<br><input type="number" name="num3">
+			<br>
+			Lenght2:	<br><input type="number" name="num4">
+			<br>
+			Lenght3:	<br><input type="number" name="num44">
+		</form>		<br>
+		<button onclick="mogolo()">Subs2</button>
+	</div>
+	<div id="f3">
+	<p>SUrvival of the biggest</p>
+		<form id="thaps" >
+			Number 1	<br><input type="number" name="num5">
+			<br>
+			Number 2	<br><input type="number" name="num6">
+			<br>
+			Number 3	 <br><input type="number" name="num7">
+		</form>		<br>
+		<button onclick="abuti()">Subs3</button>
+	</div>
+	<div id="f4">
+	<p>What time is this??</p>
+		<form id="skhathi">
+			Number to convert	<input type="number" name="num8">
+		</form>		<br>
+		<button onclick="nako()">Subs4</button>
+	</div>
+	<div id="f5">
+	<p>Separated at birth</p>
+		<form id="magama">
+			First String	<br><input type="text" name="let1">
+			<br>
+			Second String	<br><input type="text" name="let2">
+		</form>		<br>
+		<button onclick="mantxu()">Subs5</button>
+	</div>
+	<br><br>
+	<div>
+		<p id="pontxho">Alow</p>
+	</div>
+		<script>
+			function funky(){
+				var me = document.getElementById("nomoro");
+				var mongwalo, mongwalo2;
+				var us;
+
+				mongwalo = me.elements["num1"].value;
+				mongwalo2 = me.elements["num2"].value;
+				
+				if(+mongwalo === 65 || +mongwalo2 === 65){
+					document.getElementById("pontxho").innerHTML = "True";
+					console.log("True");
+				}
+				else if((+mongwalo + +mongwalo2) === 65){
+					document.getElementById("pontxho").innerHTML = "TrueZY";
+					console.log("True");
+				}
+				else {
+					document.getElementById("pontxho").innerHTML = "False";
+					console.log("False");
+				}
+			}
+			
+			function mogolo(){
+				var me2 = document.getElementById("bogolo");
+				var hla1, hla2, hla3, area, fela;
+				
+				
+				hla1 = me2.elements["num3"].value;
+				hla2 = me2.elements["num4"].value;
+				hla3 = me2.elements["num44"].value;
+				
+				fela = (+hla1 + +hla2 + +hla3) / 2;
+				area = Math.sqrt(fela*((fela-hla1)*(fela-hla2)*(fela-hla3)));
+				
+				
+				document.getElementById("pontxho").innerHTML = area;
+				console.log(area);
+			}
+			
+			function abuti(){
+				var me3 = document.getElementById("thaps");
+				var nu1, nu2, nu3;
+				
+				nu1 = me3.elements["num5"].value;
+				nu2 = me3.elements["num6"].value;
+				nu3 = me3.elements["num7"].value;
+				
+				var arr = [nu1, nu2, nu3];
+				
+				arr.sort(function(a, b){return a - b});
+				
+				document.getElementById("pontxho").innerHTML = arr[2];
+			}
+			
+			function nako(){
+				var me4 = document.getElementById("skhathi");
+				var time = me4.elements["num8"].value;
+				var ans;
+				var us = 0;
+				
+				document.getElementById("pontxho").innerHTML = time;				
+				
+				while(+time > 59){
+					time = +time - 59;
+				++us;
+
+				}
+				document.getElementById("pontxho").innerHTML = us + ":" + time;
+			}
+			
+			function mantxu(){
+				var me5 = document.getElementById("magama");
+				var lets1 = me5.elements["let1"].value;
+				var lets2 = me5.elements["let2"].value;
+				var me = 0;
+				var us = 0;
+				
+				var tum1 = lets1.split('');
+				var tum2 = lets2.split('');
+				var i = 0;
+				var mo = 0;
+				
+				me = tum1.length - 1;
+				us = tum2.length - 1;
+				while(mo <= me){
+				
+					while(i <= us){
+						if(tum1[mo] === tum2[i]){
+							console.log(tum1[mo]);
+						}
+						++i;
+				}
+				i = 0;
+				++mo;
+				}
+			}
+		</script>
+		
+		
+	</body>
+	
+</html>
